@@ -24,7 +24,6 @@ def read_annotation(filename):
 			gene = transcript["name2"]
 			if chrom not in chrom_list:
 				continue
-
 			if transcript["strand"] == "+":
 				tss = [chrom, int(transcript["txStart"])-upstream, int(transcript["txStart"])+downstream]
 			else:
